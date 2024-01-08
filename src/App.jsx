@@ -2,12 +2,14 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import DataTable from "./components/DataTable";
 import Footer from "./components/Footer";
-import DigitalMeter from "./components/DigitalMeter";
+import Gauge from "./components/Gauge";
+
 function App() {
   return (
     <>
       <Navbar></Navbar>
-      <DigitalMeter></DigitalMeter>
+      <Gauge></Gauge>
+
       <DataTable></DataTable>
       <Footer></Footer>
     </>
