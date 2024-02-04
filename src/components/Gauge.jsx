@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import "./Gauge.css";
 
 const Gauge = () => {
-  const [humidityValue, setHumidityValue] = useState(0);
-  const [temperatureValue, setTemperatureValue] = useState(69);
-  const [gasValue, setGasValue] = useState(200);
+  const [humidityValue, setHumidityValue] = useState(13);
+  const [temperatureValue, setTemperatureValue] = useState(55);
+  const [gasValue, setGasValue] = useState(260);
 
   const [humidityMin, setHumidityMin] = useState(0);
   const [humidityMax, setHumidityMax] = useState(100);
@@ -14,9 +14,9 @@ const Gauge = () => {
   const [temperatureMax, setTemperatureMax] = useState(100);
   const [temperatureThreshold, setTemperatureThreshold] = useState(25);
 
-  const [gasMin, setGasMin] = useState(0);
+  const [gasMin, setGasMin] = useState(77);
   const [gasMax, setGasMax] = useState(1000);
-  const [gasThreshold, setGasThreshold] = useState(500);
+  const [gasThreshold, setGasThreshold] = useState(70);
 
   const gaugeColor = (value, min, max, threshold) => {
     if (value < min || value > max) {
@@ -111,9 +111,6 @@ const Gauge = () => {
           </div>
         </center>
       </div>
-      <span>
-        Gauges are a work in Progress, They dont work very well as of now
-      </span>
     </>
   );
 };
