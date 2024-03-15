@@ -26,8 +26,7 @@ function DataTable() {
     const { data, error } = await supabase
       .from("readings")
       .select("*")
-      .order("created_at", { ascending: false })
-      .limit(4);
+      .order("created_at", { ascending: false });
     console.log(data, error);
     setReadings(data);
   }

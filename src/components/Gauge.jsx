@@ -2,21 +2,21 @@ import React, { useState } from "react";
 import "./Gauge.css";
 
 const Gauge = () => {
-  const [humidityValue, setHumidityValue] = useState(13);
-  const [temperatureValue, setTemperatureValue] = useState(55);
-  const [gasValue, setGasValue] = useState(260);
+  const [humidityValue, setHumidityValue] = useState(52.2);
+  const [temperatureValue, setTemperatureValue] = useState(9.6);
+  const [gasValue, setGasValue] = useState(233.43);
 
   const [humidityMin, setHumidityMin] = useState(0);
-  const [humidityMax, setHumidityMax] = useState(100);
-  const [humidityThreshold, setHumidityThreshold] = useState(40);
+  const [humidityMax, setHumidityMax] = useState(400);
+  const [humidityThreshold, setHumidityThreshold] = useState(60);
 
   const [temperatureMin, setTemperatureMin] = useState(0);
-  const [temperatureMax, setTemperatureMax] = useState(100);
-  const [temperatureThreshold, setTemperatureThreshold] = useState(25);
+  const [temperatureMax, setTemperatureMax] = useState(120);
+  const [temperatureThreshold, setTemperatureThreshold] = useState(9);
 
-  const [gasMin, setGasMin] = useState(77);
-  const [gasMax, setGasMax] = useState(1000);
-  const [gasThreshold, setGasThreshold] = useState(70);
+  const [gasMin, setGasMin] = useState(0);
+  const [gasMax, setGasMax] = useState(10000);
+  const [gasThreshold, setGasThreshold] = useState(300);
 
   const gaugeColor = (value, min, max, threshold) => {
     if (value < min || value > max) {
@@ -102,7 +102,7 @@ const Gauge = () => {
                       ),
                     }}
                   ></div>
-                  <div className="gauge__cover">{`${gasValue} PPM`}</div>
+                  <div className="gauge__cover">{`${gasValue} ppm`}</div>
                 </div>
                 <span>Gas</span>
               </div>
